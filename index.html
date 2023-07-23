@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favorite music is here</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+
+    
+    <div class="navbar">
+        <img src="resources/logo.png" alt=""><p>Spotify</p></div>
+        <div class="nav-items">
+            <ul>
+                <li>Home</li>
+                <li>Explore</li>
+            </ul>
+            <div class="user-profile">
+                <div class="dropbtn"><img src="resources/user.jpg" class="dropbtn" alt="" onclick="dropdownFunc()"></div>
+                <div id="myDropdown" class="dropdown-content">
+                        <a>Account</a>
+                        <a>Profile</a>
+                        <a>Upgrade to Premium</a>
+                        <a>Settings</a>
+                        <hr>
+                        <a>Logout</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+            <a href=""><i class="fa-solid fa-house"></i>  Home</a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i>  Search</a>
+            <a href=""><i class="fa-solid fa-bookmark"></i>  Library</a>
+    </div>
+    <div class="container">
+        <div class="song-list">
+            <h1>GYM</h1>
+            <div class="song-items-container">
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="0" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="1" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="2" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="3" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="4" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="5" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="6" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="7" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="8" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+                <div class="song-item">
+                    <img alt="1">
+                    <div class="info">
+                        <span class="songName">System pe System</span>
+                    <span class="artistName">R Maan</span>
+                    <span class="song-list-play"><i id="9" class="fa-sharp songItemPlay fa-solid fa-circle-play "></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="song-banner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="1000">
+        <div class="icons">
+            <!-- Font awesome icons -->
+            <i class="fa-sharp fa-solid fa-backward fa-xl" id="previous"></i>
+            <i class="fa-sharp fa-solid fa-circle-play fa-2xl" id="masterPlay"></i>
+            <i class="fa-sharp fa-solid fa-forward fa-xl" id="next"></i>
+            
+        </div>
+        <div class="song-info">
+            <img src="resources/musicbar.gif" width="62px" alt="1" id="gif">
+                <span id="masterSongName"> Haryana Hood</span>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        window.onscroll = function() {myFunction()};
+        var sidebar = document.getElementById('sidebar');
+        var sticky = sidebar.offsetTop;
+        function myFunction() {
+            if(window.pageYOffset >= sticky){
+                sidebar.classList.add('sticky');
+            }
+            else{
+                sidebar.classList.remove('sticky');
+            }
+        }
+            function dropdownFunc() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/8dee7fcd8c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
