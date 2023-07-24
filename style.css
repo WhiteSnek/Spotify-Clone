@@ -19,17 +19,18 @@ nav {
 }
 .navbar{
     font-weight: 600;
-    padding: 8px;
+    padding: 0;
     display: flex;
     align-content: center;
 }
-    
+
 .navbar img{
-    width: 40px;
-    height: 40px;
+    padding-top: 10px;
+    width: 20px;
+    height: 20px;
 }
 .navbar p{
-    padding:5px 10px;
+    padding:10px 10px;
 }
 
 .nav-items{
@@ -37,13 +38,13 @@ nav {
 }
 
 .nav-items ul{
-    margin-left: 2.75rem;
+    margin-left: 1rem;
     list-style-type: none;
     display: flex;
     align-items: center;
 }
 .nav-items ul li{
-    padding: 10px 40px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 .nav-items ul li:hover{
@@ -58,14 +59,14 @@ nav {
 
 .dropbtn img{
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 
 .dropdown-content {
     display: none;
-    top: 60px;
+    top: 45px;
     position: absolute;
     right: -40px;
     background-color: black;
@@ -97,7 +98,7 @@ nav {
     width: 200px;
     overflow-x: hidden;
     background-color: black;
-    display: flex;
+    display: none;
     flex-direction: column;
     left: 0;
 }
@@ -125,7 +126,7 @@ nav {
     font-family: 'Mukta', sans-serif;
     display: flex;
     width: 70%;
-    margin: 23px 0;
+    margin: 23px 0 23px 30px;
     border-radius: 12px;
     padding: 34px;
     background-image: url('resources/bg.jpg');
@@ -178,7 +179,7 @@ nav {
 }
 
 .song-item img{
-    height: 230px;
+    height: 100px;
 }
 .info {
     display: flex;
@@ -225,6 +226,21 @@ nav {
     text-align: end;
 }
 @media screen and (min-width: 480px) {
+    .navbar img{
+        padding-top: 0;
+        width: 40px;
+        height: 40px;
+    }
+    .dropbtn img{
+        width: 40px;
+        height: 40px;
+    }
+    .dropdown-content {
+        top: 60px;
+    }
+    .nav-items ul li{
+        padding: 10px 40px;
+    }
   .container {margin-left: 300px;}
   .song-item{
     width: 230px;
@@ -232,7 +248,7 @@ nav {
     padding: 20px 20px;
   }
   .song-item img{
-    width: auto;
+    height: 230px;
   }
   .songName {
     font-size: 20px;
@@ -246,5 +262,8 @@ nav {
   }
   .icons i{
     font-size: x-large;
+  }
+  #sidebar {
+    display: flex;
   }
 }
